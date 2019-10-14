@@ -26,6 +26,7 @@ class LogController extends Controller
     {
         $sql = Log::with('user.roles');
         $sql->leftJoin(config('admin.user_table') . " as users", "users.id" , "=", "admin_logs.admin_id");
+        //检查关键字是否为空
         if(true == $request->has('title')&&true == $request->has('status')) {
             $sql->where('admin_logs.'.$request->input('status'), 'LIKE', '%'.trim($request->input('title')).'%');
         }
