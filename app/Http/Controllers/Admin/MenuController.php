@@ -13,7 +13,6 @@ use App\Models\Log;
 use App\Service\DataService;
 use App\Models\Role;
 use App\Models\Menu;
-use App\Http\Controllers\Controller;
 class MenuController extends BaseController
 {
     /**

@@ -26,7 +26,7 @@ class HomeController extends BaseController
      * 验证码
      */
     public function verify(){
-        
+
         $phrase = new PhraseBuilder;
         $code = $phrase->build(4);
         $builder = new CaptchaBuilder($code, $phrase);
